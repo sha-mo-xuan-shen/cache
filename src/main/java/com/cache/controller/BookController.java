@@ -3,6 +3,8 @@ package com.cache.controller;
 import com.cache.domain.Book;
 import com.cache.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,7 @@ public class BookController {
     }
 
     @GetMapping("{id}")
+    @Cacheable(value = "cacheSpace",key = "#id")
     public Book byId(@PathVariable int id){
         return bookService.getById(id);
     }

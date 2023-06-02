@@ -16,11 +16,15 @@ public class BookServiceImpl extends ServiceImpl<BookDao, Book>  implements Book
     BookDao bookDao;
 
     public HashMap<Integer,Book> cache = new HashMap<>();
+    // @Override
+    // public Book getById(int id) {
+    //     if(null==cache.get(id)){
+    //         cache.put(id,bookDao.selectById(id));
+    //     }
+    //     return cache.get(id);
+    // }
     @Override
     public Book getById(int id) {
-        if(null==cache.get(id)){
-            cache.put(id,bookDao.selectById(id));
-        }
-        return cache.get(id);
+        return bookDao.selectById(id);
     }
 }
