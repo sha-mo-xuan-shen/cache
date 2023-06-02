@@ -7,6 +7,10 @@ spring:
       url: jdbc:mysql://localhost:3306/frog?serverTimezone=UTC
       username: root
       password: 1234
+  cache:
+    type: ehcache
+    ehcache:
+      config: ehcache.xml
 mybatis-plus:
   global-config:
     db-config:
