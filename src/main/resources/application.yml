@@ -15,6 +15,10 @@ spring:
       url: jdbc:mysql://localhost:3306/frog?serverTimezone=UTC
       username: root
       password: 1234
+memcached:
+  servers: localhost:11211
+  poolSize: 10
+  opTimeout: 10
 #  cache:
 #    type:
 #
