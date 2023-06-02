@@ -1,6 +1,5 @@
 package com.cache.service;
 
-
 import com.cache.domain.SMSCode;
 
 public interface SMSCodeService {
