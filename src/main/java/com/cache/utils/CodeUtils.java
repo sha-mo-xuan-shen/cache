@@ -22,10 +22,10 @@ public class CodeUtils {
         return null;
     }
 
-    public static void main(String[] args) {
-        for (int i=0;i<=20;i++){
-        // String code = ;
-        System.out.println(new CodeUtils().generator("114514"));
-        }
-    }
+//    public static void main(String[] args) {
+//        for (int i=0;i<=20;i++){
+//        // String code = ;
+//        System.out.println(new CodeUtils().generator("114514"));
+//        }
+//    }
 }

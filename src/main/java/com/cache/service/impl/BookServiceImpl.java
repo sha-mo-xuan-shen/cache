@@ -16,6 +16,7 @@ public class BookServiceImpl extends ServiceImpl<BookDao, Book>  implements Book
     BookDao bookDao;
 
     public HashMap<Integer,Book> cache = new HashMap<>();
+    // 手动创建缓存
     // @Override
     // public Book getById(int id) {
     //     if(null==cache.get(id)){

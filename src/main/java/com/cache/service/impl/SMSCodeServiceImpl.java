@@ -15,7 +15,9 @@ public class SMSCodeServiceImpl implements SMSCodeService {
     CodeUtils codeUtils;
 
     @Override
+    //取缓存
     // @Cacheable(value = "smscode",key = "#tele")
+    //存缓存 return值为存储的value，参数为key
     @CachePut(value = "smscode",key = "#tele")
     public String sendCodeToSMS(String tele) {
         String code = codeUtils.generator(tele);

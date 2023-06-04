@@ -24,6 +24,7 @@ public class BookController {
     }
 
     @GetMapping("{id}")
+    //存取缓存，返回值为null只取不存，返回值为存储的value，参数为key
     @Cacheable(value = "cacheSpace",key = "#id")
     public Book byId(@PathVariable int id){
         return bookService.getById(id);
