@@ -17,7 +17,9 @@ public class SMSCodeServiceImpl implements SMSCodeService {
     @Autowired
     MemcachedClient memcachedClient;
     @Override
+    //存取缓存
     // @Cacheable(value = "smscode",key = "#tele")
+    //存缓存，只存不取，返回值为存储值
     @CachePut(value = "smscode",key = "#tele")
     public String sendCodeToSMS(String tele) {
         String code = codeUtils.generator(tele);

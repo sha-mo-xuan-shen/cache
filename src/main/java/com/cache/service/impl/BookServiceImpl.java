@@ -15,6 +15,7 @@ public class BookServiceImpl extends ServiceImpl<BookDao, Book>  implements Book
     @Autowired
     BookDao bookDao;
 
+    //手动存取缓存
     public HashMap<Integer,Book> cache = new HashMap<>();
     // @Override
     // public Book getById(int id) {
